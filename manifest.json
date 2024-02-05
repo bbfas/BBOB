@@ -1,0 +1,32 @@
+{
+  "name": "BBOB gta online outfits builder",
+  "version": "0.0.0.1",
+  "manifest_version": 3,
+  "description": "A chromium extension to build GTA online outfits.",
+  "permissions": ["storage"],
+  "background": {
+    "service_worker": "js/background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/nasapod16x16.png",
+    "32": "icons/nasapod32x32.png",
+    "48": "icons/nasapod48x48.png",
+    "128": "icons/nasapod128x128.png"
+  },
+  "action": {
+    
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.bbfas.com/cc/*"
+      ],
+      "js": [
+        "js/content.js"  
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}

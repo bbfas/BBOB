@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BBOB</title>
+    <style type="text/css">
+        .box {
+            background: rgba(16, 163, 72, 0.2);
+            width: 510px;
+            height: auto;
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            border-radius: 25px;
+            border: 2px solid transition;
+        }
+
+        .box img {
+            max-height: 100px;
+            max-width: 100px;
+            border-radius: 10px;
+        }
+
+        .box img:hover {
+            transform: scale(1.5);
+            transition: transform 0.3s ease;
+        }
+
+        .box1 {
+            background: rgba(206, 29, 67, 0.2);
+            width: 510px;
+            height: auto;
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            border-radius: 25px;
+            border: 2px solid transition;
+        }
+
+        .box1 img {
+            max-height: 177px;
+            max-width: 100px;
+            border-radius: 10px;
+        }
+
+        .box1 img:hover {
+            transform: scale(1.5);
+            transition: transform 0.3s ease;
+        }
+
+
+        .btn {
+            background-color: #fcaf17;
+            color: white;
+            padding: 20px;
+            margin-top: 5px;
+            border-radius: 12px;
+            border: 2px solid #fcaf17;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3e8e41;
+            transform: scale(1.2);
+        }
+
+        .btn:active {
+            background-color: #4CAF50;
+            color: white;
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+
+<body id="popup" background="/images/sc_pattern_new.png">
+    <div class="box">
+        <button class="btn"><a href="https://www.bbfas.com/cc" target="_blank">start</a></button>
+        <button class="btn" id="reset">reset</button>
+        <button class="btn" id="create">create</button>
+        <button class="btn" id="copy">copy</button>
+        <BR>
+        <a id="bb"></a><BR>
+        <label id="myLabel"></label>
+    </div>
+    <div class="box" id="head">
+
+    </div>
+    <div class="box1" id="body">
+
+    </div>
+    <div class="box" id="body2">
+
+    </div>
+    <div class="box">
+        <a href="https://www.bbfas.com/bbob/"
+            target="_blank">BBFAS-BBOB</a>
+    </div>
+    <script src="/popup/popup.js"></script>
+
+
+</body>
+
+</html>
