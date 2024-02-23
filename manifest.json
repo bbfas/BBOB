@@ -1,6 +1,6 @@
 {
   "name": "BBOB gta online outfits builder",
-  "version": "0.0.0.1",
+  "version": "0.0.0.2",
   "manifest_version": 3,
   "description": "A chromium extension to build GTA online outfits.",
   "permissions": ["storage"],

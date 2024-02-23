@@ -1,4 +1,4 @@
-//popup.js
+ //popup.js
 /*
                   L1(cccucULLQQ                    
                  "(txxxfjrxnc0z^                   
@@ -108,17 +108,17 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
         '/cc/m/gla/': 'head',
         '/cc/f/ears/': 'head',
         '/cc/m/ear/': 'head',
-        '/cc/bags/': 'body2',
+        '/cc/bags/': 'head',
         '/cc/f/torsos/': 'body',
         '/cc/m/torsos/': 'body',
-        '/cc/f/Watches/': 'body2',
-        '/cc/m/Watches/': 'body2',
-        '/cc/f/bracelets/': 'body2',
-        '/cc/m/bracelets/': 'body2',
-        '/cc/f/shoes/': 'body2',
-        '/cc/m/shoes/': 'body2',
-        '/cc/f/leg/': 'body2',
-        '/cc/m/leg/': 'body2',
+        '/cc/f/Watches/': 'head',
+        '/cc/m/Watches/': 'head',
+        '/cc/f/bracelets/': 'head',
+        '/cc/m/bracelets/': 'head',
+        '/cc/f/shoes/': 'body',
+        '/cc/m/shoes/': 'body',
+        '/cc/f/leg/': 'body',
+        '/cc/m/leg/': 'body',
         '/cc/f/acc/': 'body',
         '/cc/m/acc/': 'body',
         '/cc/f/us/': 'body',
@@ -126,7 +126,10 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
         '/cc/f/ba/': 'body',
         '/cc/m/ba/': 'body',
         '/cc/f/tops/': 'body',
-        '/cc/m/tops/': 'body',         
+        '/cc/m/tops/': 'body',
+        '/cc/f/dec/': 'body',
+        '/cc/m/dec/': 'body',
+                 
     };
     var divId = pageToDivId[message.page];
     if (divId) {
@@ -206,6 +209,12 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
         if (parts.length === 2) {
             data[21] = parts[0];
             data[47] = parts[1];
+        }
+    } else if (message.page === '/cc/f/dec/' || message.page === '/cc/m/dec/') {
+        var parts = message.labelText.split('-');
+        if (parts.length === 2) {
+            data[23] = parts[0];
+            data[49] = parts[1];
         }
     } else if (message.page === '/cc/f/tops/' || message.page === '/cc/m/tops/') {
         var parts = message.labelText.split('-');
